@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciamento_comprar</title>
+</head>
+<body>
+    <header class="header">
+        <h1>MERCADINHO</h1>
+    </header>
+
+    <div class="saldo-money">
+        <div class="nome-saldo"> Seu saldo é:</div>
+        <span class="saldo-atual ">3000</span>
+     </div>
+
+    <main class="saldo cards">
+       
+
+        <div class="card"  id="p1" data-valor="7,00">
+            
+            <h1>produto1</h1>
+            <img src="imagens_produtos/image1.jpg"  alt="image">
+
+            <div class="infor_produto">
+                <p>otima qualidade</p>
+                <span class="value1">7,00</span>
+            </div>
+
+            <div class="adicionar" onclick="pegaAt(this)"><span><i class="ri-add-line"></i></span></div>
+        </div>
+        <div class="card" id="p2" data-valor="5,00">
+            
+            <h1>produto2</h1>
+            <img src="imagens_produtos/italac_produto.jpg" alt="image">
+
+            <div class="infor_produto">
+                <p>otima qualidade</p>
+                <span class="value2">5,00</span>
+            </div>
+
+            <div class="adicionar" onclick="pegaAt(this)"><span><i class="ri-add-line"></i></span></div>
+        </div>
+        <div class="card" id="p3"  data-valor="7,50">
+            
+            <h1>produto3</h1>
+            <img src="imagens_produtos/pimenta_produto.jpg" alt="image">
+
+            <div class="infor_produto">
+                <p>otima qualidade</p>
+                <span class="value3">7,50</span>
+            </div>
+
+            <div class="adicionar" onclick="pegaAt(this)"><span><i class="ri-add-line"></i></span></div>
+        </div>
+        <div class="card" id="p4" data-valor="8,00">
+            
+            <h1>produto4</h1>
+            <img src="imagens_produtos/creme_produto.jpg" alt="image">
+
+            <div class="infor_produto">
+                <p>otima qualidade</p>
+                <span class="value4">8,00</span>
+            </div>
+
+            <div class="adicionar" onclick="pegaAt(this)"><span><i class="ri-add-line"></i></span></div>
+        </div>
+        <div class="card" id="p5" data-valor="6,75">
+            
+            <h1>produto5</h1>
+            <img src="imagens_produtos/tiras_de_frango_produto.jpg" alt="image">
+
+            <div class="infor_produto">
+                <p>otima qualidade</p>
+                <span class="value5">6,75</span>
+            </div>
+
+            <div class="adicionar" onclick="pegaAt(this)"><span><i class="ri-add-line"></i></span></div>
+        </div>
+        <div class="card" id="p6" data-valor="8,20">
+            
+            <h1>produto6</h1>
+            <img src="imagens_produtos/mussarela_produto.jpg" alt="image">
+
+            <div class="infor_produto">
+                <p>otima qualidade</p>
+                <span class="value6">8,20</span>
+            </div>
+
+            <div class="adicionar" onclick="pegaAt(this)"><span><i class="ri-add-line"></i></span></div>
+        </div>
+        <div class="carrinho_comprar">
+             
+            <span class="carrinho_pointer">0</span>
+            <i class="ri-shopping-cart-2-line" onclick="carrinho_compra()"></i>
+       
+        </div>
+
+        <!-- segunda parte para finalizar a comprar -->
+
+        <div class="produto_sele">
+            <div class="header_produto_sele">
+                <h1>Produtos selecionado</h1>
+
+                <button class="voltar_product">VOLTAR</button>
+            </div>
+          
+            <div class="organiza_cards">
+                <div class="cards_selecion" >
+                      <!-- <div class="card-sele" >
+                
+                        <h1>produto6</h1>
+                        <img src="imagens_produtos/mussarela_produto.jpg" alt="image">
+                        <div class="infor_produto">
+                            <p>otima qualidade</p>
+                            <span>$8,20</span>
+                        </div>
+                        <div class="remove_cards">
+                            <span>X</span>
+                        </div>
+                    </div>
+                
+                    <div class="card-sele" >
+                
+                        <h1>produto6</h1>
+                        <img src="imagens_produtos/mussarela_produto.jpg" alt="image">
+                        <div class="infor_produto">
+                            <p>otima qualidade</p>
+                            <span>$8,20</span>
+                        </div>
+                        <div class="remove_cards">
+                            <span>X</span>
+                        </div>
+                    </div>
+                    <div class="card-sele" >
+                
+                        <h1>produto6</h1>
+                        <img src="imagens_produtos/mussarela_produto.jpg" alt="image">
+                        <div class="infor_produto">
+                            <p>otima qualidade</p>
+                            <span>$8,20</span>
+                        </div>
+                        <div class="remove_cards">
+                            <span>X</span>
+                        </div>
+                    </div>
+                    <div class="card-sele" >
+                
+                        <h1>produto6</h1>
+                        <img src="imagens_produtos/mussarela_produto.jpg" alt="image">
+                        <div class="infor_produto">
+                            <p>otima qualidade</p>
+                            <span>$8,20</span>
+                        </div>
+                        <div class="remove_cards">
+                            <span>X</span>
+                        </div>
+                    </div>
+                    <div class="resultado_comprar">
+                        <div class="informacao">
+                          <div class="quantidade_produto">
+                            <div class="produto">creme de pentear</div>
+                            <span>8,00R$</span>
+                          </div>
+                          <div class="total">total:<span>335</span></div>
+                        </div>
+                   </div> -->
+                
+                
+                </div>
+                <div class="remove_cards">
+                    <span>X</span>
+                </div>
+                
+                <div class="resultado_comprar">
+                    <div class="informacao">
+                      <div class="quantidade_produto">
+                        <!-- <div class="produto">creme de pentear</div>
+                        <span>8,00R$</span> -->
+                      </div>
+                      <div class="total">Total:<span class="valorFinal">335</span></div>
+                    </div>
+               </div>
+            </div>
+                
+      
+           
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
