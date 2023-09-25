@@ -79,6 +79,7 @@ const card11 = document.querySelectorAll('.card')
 
 let total =0
 let score=0
+let produto1, produto2,produto3,produto4, produto5, produto6
 
 
 // Função para remover um card
@@ -97,7 +98,7 @@ function pegaAt(botao) {
 
     value1=document.querySelector('.value1').innerText
      
-    const produto1=`creme de pentear ótima qualidade valor ${value1} `
+     produto1=`creme de pentear ótima qualidade valor ${value1} `
      const img1='imagens_produtos/image1.jpg'
       
      total+=parseFloat(value1.replace(',','.'))
@@ -219,6 +220,7 @@ function criarCaixa(ec,img){
   atualizarScore()
 
   atualizarTotal()
+  
   
 });
 
