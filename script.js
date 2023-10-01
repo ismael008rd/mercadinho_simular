@@ -1,38 +1,38 @@
 
 
-// let inicioTotal = 25
-// let score =0
-  
 
+const inforProdutoImg=[
+  {
+    produto_informação:'otima qualidade 7$',
+    img_prduto:'imagens_produtos/image1.jpg'
 
-// function addicionar(valorP){
-//   if(inicioTotal>=valorP){
-//     inicioTotal -= valorP
-//      score++
-//     console.log(valorP)
-//     atualizarSaldo()
+  },
+  {
+    produto_informação:'otima qualidade meus bbs  5$',
+    img_prduto:'imagens_produtos/italac_produto.jpg'
 
-//     console.log(score)
-    
-   
-//   }
-//   else{
-//     console.log('saldo insuficiente')
-//   }
-  
-//   atualizarScore(score)
-  
-// }
+  },
+  {
+    produto_informação:'otima qualidade meus bbs  7,50$',
+    img_prduto:'imagens_produtos/pimenta_produto.jpg'
 
-// function atualizarSaldo(){
-//   const saldo_comprar = document.querySelector('.saldo-atual')
-//   saldo_comprar.textContent=`${inicioTotal}$`
-// }
+  },
+  {
+    produto_informação:'otima qualidade meus bbs  8$',
+    img_prduto:'imagens_produtos/creme_produto.jpg'
 
-// function atualizarScore(score){
-//   const atualizaricone= document.querySelector('.carrinho_pointer')
-//   atualizaricone.textContent= score
-// }
+  },
+  {
+    produto_informação:'otima qualidade meus bbs  6,75$',
+    img_prduto:'imagens_produtos/tiras_de_frango_produto.jpg'
+
+  },
+  {
+    produto_informação:'otima qualidade meus bbs  8,20$',
+    img_prduto:'imagens_produtos/mussarela_produto.jpg'
+
+  },
+]
 
 const container = document.querySelector('.saldo')
 const caixar_final = document.querySelector('.cards_selecion')
@@ -79,7 +79,10 @@ const card11 = document.querySelectorAll('.card')
 
 let total =0
 let score=0
-let produto1, produto2,produto3,produto4, produto5, produto6
+
+let infor_proudutoApp
+let img
+// let produto1, produto2,produto3,produto4, produto5, produto6
 
 
 // Função para remover um card
@@ -97,84 +100,125 @@ function pegaAt(botao) {
  if(botaoo=='p1'){
 
     value1=document.querySelector('.value1').innerText
+    
+    let idex=0
      
-     produto1=`creme de pentear ótima qualidade valor ${value1} `
-     const img1='imagens_produtos/image1.jpg'
+   inforProdutoImg[idex]
+
+    
+    posicion(inforProdutoImg,idex)
+
+     const img=inforProdutoImg[0].img_prduto
       
      total+=parseFloat(value1.replace(',','.'))
-     ColocarProduto(produto1)
 
-    criarCaixa(value1,img1)
+   
+
+    criarCaixa(value1,img, idex)
    
     score++
+   
    
     
     console.log(total)
    
-  }else if(botaoo=='p2'){
+  }
+  else if(botaoo=='p2'){
      
      value2 = document.querySelector('.value2').innerText
-     produto2=`produto de ótima qualidade ${value2}`
-     const img2='imagens_produtos/italac_produto.jpg'
-     ColocarProduto(produto2)
+     
+     let idex=1
+     
+    inforProdutoImg[idex]
+     
+    posicion(inforProdutoImg,idex)
+
+    
+      img=inforProdutoImg[1].img_prduto
+    
      total+=parseFloat(value2.replace(',','.'))
    
      score++
-    criarCaixa(value2,img2)
+    criarCaixa(value2,img, idex)
   }
  
   else if(botaoo=='p3'){
      
      value3 = document.querySelector('.value3').innerText
      
-     produto3=`produto de ótima qualidade ${value3}`
-     const img2='imagens_produtos/pimenta_produto.jpg'
-     ColocarProduto(produto3)
+     let idex=2
+     
+    inforProdutoImg[idex]
+     
+    posicion(inforProdutoImg,idex)
+
+    
+      img=inforProdutoImg[2].img_prduto
+    
      total+=parseFloat(value3.replace(',','.'))
    
      score++
-    criarCaixa(value3,img2)
+    criarCaixa(value3,img, idex)
   }
  
   else if(botaoo=='p4'){
      
      value4 = document.querySelector('.value4').innerText
-     produto4=`produto de ótima qualidade ${value4}`
-     const img2='imagens_produtos/creme_produto.jpg'
-     ColocarProduto(produto4)
+     
+     let idex=3
+     
+    inforProdutoImg[idex]
+     
+    posicion(inforProdutoImg,idex)
+
+    
+      img=inforProdutoImg[3].img_prduto
+    
      total+=parseFloat(value4.replace(',','.'))
    
      score++
-    criarCaixa(value4,img2)
+    criarCaixa(value4,img, idex)
   }
   else if(botaoo=='p5'){
      
      value5 = document.querySelector('.value5').innerText
-     produto5=`produto de ótima qualidade ${value5}`
-     const img2='imagens_produtos/tiras_de_frango_produto.jpg'
-     ColocarProduto(produto5)
-     total+=parseFloat(value5.replace(',','.'))
-   
-     score++
-    criarCaixa(value5,img2)
+     let idex=4
+     
+     inforProdutoImg[idex]
+      
+     posicion(inforProdutoImg,idex)
+ 
+     
+       img=inforProdutoImg[4].img_prduto
+     
+      total+=parseFloat(value5.replace(',','.'))
+    
+      score++
+     criarCaixa(value5,img, idex)
   }
   else if(botaoo=='p6'){
      
      value6 = document.querySelector('.value6').innerText
-     produto6=`produto de ótima qualidade ${value6}`
-     const img2='imagens_produtos/mussarela_produto.jpg'
-     ColocarProduto(produto6)
-     total+=parseFloat(value6.replace(',','.'))
-   
-     score++
-    criarCaixa(value6,img2)
+     let idex=5
+     
+     inforProdutoImg[idex]
+      
+     posicion(inforProdutoImg,idex)
+ 
+     
+       img=inforProdutoImg[5].img_prduto
+     
+      total+=parseFloat(value6.replace(',','.'))
+    
+      score++
+     criarCaixa(value6,img, idex)
   }
   atualizarScore()
  
   atualizarTotal()
   
   
-    
+  
 
   console.log('Botão clicado');
 
@@ -182,7 +226,8 @@ function pegaAt(botao) {
 }
 
 
-function criarCaixa(ec,img){
+function criarCaixa(ec,img, index){
+
   
   const maisUmelemnto= document.createElement('span')
   const imgIm= document.createElement('img')
@@ -191,7 +236,8 @@ function criarCaixa(ec,img){
     imgIm.setAttribute('src',img)
   // Crie um ícone de remoção
   const removeIcon = document.createElement('div');
-  removeIcon.setAttribute('class', 'remove_cards');
+  removeIcon.setAttribute('class', 'remove_cards'+index);
+  removeIcon.classList.add('remove_cards')
   removeIcon.innerText = 'X';
    
   maisUmelemnto.innerHTML=ec
@@ -204,25 +250,54 @@ function criarCaixa(ec,img){
   
   // Adicione o novo card à caixa 'produto_sele'
  caixar_final.appendChild(novoElemento1);
+ 
 
- novoElemento1.addEventListener('click', function () {
-  var card = this;
+
+ removeIcon.addEventListener('click',Inconeremover)
+
+
+ function Inconeremover() {
+  var card = novoElemento1
+   
+  console.log()
+  
+ 
+
+  // console.log('----------------------')
+  // console.log(card)
+  // console.log('----------------------')
+
+
 
   const verFilho = parseFloat(card.firstChild.innerText.replace(',','.'))
 
- 
 
-  console.log(card)
  
   card.remove();
+
+  
+ 
+
   remove(verFilho)
 
   atualizarScore()
+   
+
 
   atualizarTotal()
+ 
+ 
+  apagarInformacaoPro(removeIcon)
+ 
   
   
-});
+};
+
+ 
+ 
+
+
+
 
 
 }  
@@ -231,20 +306,13 @@ function remove(product){
    total-=product
     
    score--
+  
    
    console.log(total)
 }
 
 
 
-function ColocarProduto(inforP){
-  const quantida_prod=document.querySelector('.quantidade_produto')
-  const criandoDivP=document.createElement('div')
-  criandoDivP.setAttribute('class','produto')
-  criandoDivP.innerHTML=inforP
-
-  quantida_prod.appendChild(criandoDivP)
-}
 
 
 
@@ -271,3 +339,89 @@ const scoreAtualizar= document.querySelector('.carrinho_pointer')
 function atualizarScore(){
    scoreAtualizar.innerHTML=score
 }
+
+
+
+function posicion(produif, index){
+  const quantida_prod=document.querySelector('.quantidade_produto')
+  const criandoDivP=document.createElement('div')
+  criandoDivP.setAttribute('class','produto'+index)
+  criandoDivP.classList.add('produto')
+  criandoDivP.innerHTML= produif[index].  produto_informação
+
+  
+  quantida_prod.appendChild(criandoDivP)
+ }
+
+ let idex,i;
+
+
+function apagarInformacaoPro(xelemento){
+  const verClasse= xelemento.getAttribute('class')
+console.log(verClasse)
+let productInfor = document.querySelectorAll('.produto')
+
+
+if(verClasse=='remove_cards0 remove_cards'){     
+  console.log('aqui eeeeeuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuueeeeeeeeeeeeeeeeeeeeeee')
+   const product1 = document.querySelector('.produto0')
+   console.log(product1)
+   product1.remove()
+   
+}
+else if(verClasse=='remove_cards1 remove_cards'){
+  
+  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  const product2 = document.querySelector('.produto1')
+  console.log(product2)
+  product2.remove()
+}
+else if(verClasse=='remove_cards2 remove_cards'){
+  
+  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  const product3 = document.querySelector('.produto2')
+  console.log(product3)
+  product3.remove()
+}
+else if(verClasse=='remove_cards3 remove_cards'){
+  
+  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  const product4 = document.querySelector('.produto3')
+  console.log(product4)
+  product4.remove()
+}
+else if(verClasse=='remove_cards4 remove_cards'){
+  
+  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  const product5 = document.querySelector('.produto4')
+  console.log(product5)
+  product5.remove()
+}
+else if(verClasse=='remove_cards5 remove_cards'){
+  
+  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  const product6 = document.querySelector('.produto5')
+  console.log(product6)
+  product6.remove()
+}
+ 
+  
+ 
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
