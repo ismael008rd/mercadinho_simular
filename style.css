@@ -36,9 +36,9 @@
     padding: 50px;
     width: 200px;
     border-radius: 5px;
-    box-shadow: inset 1px 1px 14px 1px  rgb(105, 89, 89);
+    box-shadow: inset 1px 1px 14px 1px  rgb(147, 243, 246);
     margin: 5px;
-    background-color: rgb(195, 178, 178);
+    background-color: rgb(199, 248, 253);
     height: 300px;
 }
 
@@ -72,7 +72,7 @@
     display: block;
     font-size: 45px;
     width: 60px;
-    background-color: red;
+    background-color: rgb(123, 251, 114);
 }
 
 .carrinho_comprar i:hover{
@@ -225,8 +225,17 @@
 .voltar_product{
     background-color: blue;
     margin: 10px;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     padding: 10px;
     color: white;
+}
+
+i{
+    background-color: rgb(177, 39, 159);
+    color: white;
+}
+i:hover{
+    background-color: rgb(231, 17, 203);
 }
