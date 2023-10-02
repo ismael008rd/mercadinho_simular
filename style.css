@@ -150,8 +150,11 @@
     padding: 10px;
     display: flex;
     gap: 5px;
-
-   
+    align-content:space-between;
+    overflow: scroll;
+    
+    height: 50vh;
+    flex-basis: 45rem;
     flex-wrap: wrap;
     margin: 5px;
     background-color: #e0b8b8;
@@ -189,7 +192,7 @@
     
     order: 2;
     
-    height: 300px;
+    height: 50vh;
 }
 
 .quantidade_produto,.total{
@@ -200,6 +203,9 @@
 
 .organiza_cards{
     display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 /* .voltar_product{

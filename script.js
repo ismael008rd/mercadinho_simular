@@ -214,7 +214,7 @@ function pegaAt(botao) {
      criarCaixa(value6,img, idex)
   }
   atualizarScore()
- 
+  
   atualizarTotal()
   
   
@@ -363,7 +363,7 @@ let productInfor = document.querySelectorAll('.produto')
 
 
 if(verClasse=='remove_cards0 remove_cards'){     
-  console.log('aqui eeeeeuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuueeeeeeeeeeeeeeeeeeeeeee')
+  
    const product1 = document.querySelector('.produto0')
    console.log(product1)
    product1.remove()
@@ -371,35 +371,34 @@ if(verClasse=='remove_cards0 remove_cards'){
 }
 else if(verClasse=='remove_cards1 remove_cards'){
   
-  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  
   const product2 = document.querySelector('.produto1')
   console.log(product2)
   product2.remove()
 }
 else if(verClasse=='remove_cards2 remove_cards'){
   
-  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  
   const product3 = document.querySelector('.produto2')
   console.log(product3)
   product3.remove()
 }
 else if(verClasse=='remove_cards3 remove_cards'){
   
-  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
   const product4 = document.querySelector('.produto3')
   console.log(product4)
   product4.remove()
 }
 else if(verClasse=='remove_cards4 remove_cards'){
   
-  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+  
   const product5 = document.querySelector('.produto4')
   console.log(product5)
   product5.remove()
 }
 else if(verClasse=='remove_cards5 remove_cards'){
   
-  console.log('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibbbbbbbbbbbbbbbbbbbbbbb')
+ 
   const product6 = document.querySelector('.produto5')
   console.log(product6)
   product6.remove()
