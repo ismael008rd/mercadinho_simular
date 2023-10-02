@@ -164,8 +164,9 @@
 
 .card-sele{
     position: relative;
-    background-color: red;
+    background-color: rgb(253, 79, 79);
     padding: 15px;
+    border-radius: 10px;
     width: 140px;
     align-items: center;
     display: flex;
@@ -177,17 +178,25 @@
 
 .card-sele img{
     width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.card-sele span{
+    color: azure;
 }
 
 .remove_cards{
     position: absolute;
     top:10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #84179f;
     cursor: pointer;
     right: 10px;
 }
 
 .resultado_comprar{
-    background-color: green;
+    background-color: rgb(125, 223, 125);
     width: 500px;
     
     order: 2;
@@ -196,7 +205,7 @@
 }
 
 .quantidade_produto,.total{
-    background-color: red;
+    background-color: rgb(206, 234, 239);
     padding: 10px;
     margin: 5px;
 }
@@ -208,6 +217,16 @@
    
 }
 
-/* .voltar_product{
-    
-} */
+.produto, .total{
+    color: rgb(46, 165, 72);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.voltar_product{
+    background-color: blue;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
